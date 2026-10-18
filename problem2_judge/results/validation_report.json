@@ -1,0 +1,183 @@
+{
+  "position_bias": {
+    "overall_flip_rate": 0.042,
+    "share_of_decisive_verdicts_that_picked_first_position": 0.483,
+    "note": "flip = the verdict changed when A/B order was swapped. Without bias the first-position share is ~0.5 on equal-quality pairs.",
+    "by_pair_type": {
+      "identical_answers": {
+        "n_pairs": 6,
+        "flip_rate": 0.0,
+        "hard_flip_rate": 0.0,
+        "error_rate_single_order_BEFORE": 0.0,
+        "error_rate_both_orders_AFTER": 0.0,
+        "final_tie_rate": 1.0
+      },
+      "correct_vs_wrong": {
+        "n_pairs": 6,
+        "flip_rate": 0.0,
+        "hard_flip_rate": 0.0,
+        "error_rate_single_order_BEFORE": 0.0,
+        "error_rate_both_orders_AFTER": 0.0,
+        "final_tie_rate": 0.0
+      },
+      "correct_vs_padded": {
+        "n_pairs": 6,
+        "flip_rate": 0.0,
+        "hard_flip_rate": 0.0,
+        "error_rate_single_order_BEFORE": 0.0,
+        "error_rate_both_orders_AFTER": 0.0,
+        "final_tie_rate": 0.0
+      },
+      "correct_vs_terse": {
+        "n_pairs": 6,
+        "flip_rate": 0.167,
+        "hard_flip_rate": 0.0,
+        "error_rate_single_order_BEFORE": 0.0,
+        "error_rate_both_orders_AFTER": 0.0,
+        "final_tie_rate": 0.667
+      }
+    },
+    "raw_letter_counts": {
+      "A": 14,
+      "B": 15,
+      "tie": 19
+    },
+    "judge_usage": {
+      "calls": 48,
+      "prompt_tokens": 14558,
+      "completion_tokens": 1708,
+      "parse_failures": 0,
+      "estimated_cost_usd": 0.0,
+      "judge_model": "groq/qwen/qwen3.8-27b"
+    }
+  },
+  "agreement_with_human_labels": {
+    "naive_judge_BEFORE": {
+      "n_cases": 27,
+      "pass_fail_agreement": 0.889,
+      "cohens_kappa": 0.776,
+      "spearman_correlation": 0.953,
+      "mean_abs_error_vs_human": 0.476,
+      "judge_false_pass": 3,
+      "judge_false_fail": 0,
+      "correctness_score_histogram": {
+        "1": 9,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 17
+      },
+      "overall_score_stdev": 1.512,
+      "share_of_overall_scores_4_or_more": 0.63,
+      "human_share_4_or_more": 0.519,
+      "judge_usage": {
+        "calls": 27,
+        "prompt_tokens": 7709,
+        "completion_tokens": 5259,
+        "parse_failures": 0,
+        "estimated_cost_usd": 0.0,
+        "judge_model": "groq/qwen/qwen3.8-27b"
+      }
+    },
+    "hardened_judge_AFTER": {
+      "n_cases": 27,
+      "pass_fail_agreement": 0.889,
+      "cohens_kappa": 0.776,
+      "spearman_correlation": 0.967,
+      "mean_abs_error_vs_human": 0.465,
+      "judge_false_pass": 3,
+      "judge_false_fail": 0,
+      "correctness_score_histogram": {
+        "1": 8,
+        "2": 0,
+        "3": 2,
+        "4": 0,
+        "5": 17
+      },
+      "overall_score_stdev": 1.485,
+      "share_of_overall_scores_4_or_more": 0.63,
+      "human_share_4_or_more": 0.519,
+      "judge_usage": {
+        "calls": 27,
+        "prompt_tokens": 23396,
+        "completion_tokens": 5527,
+        "parse_failures": 0,
+        "estimated_cost_usd": 0.0,
+        "judge_model": "groq/qwen/qwen3.8-27b"
+      }
+    }
+  },
+  "verbosity_and_sycophancy_probe": {
+    "naive_judge_BEFORE": {
+      "mean_overall_correct": 5.0,
+      "mean_overall_padded": 4.787,
+      "verbosity_gain (padded - correct, ideal <= 0)": -0.213,
+      "padded_scored_higher_rate": 0.0,
+      "mean_overall_wrong_confident (ideal low)": 1.65,
+      "wrong_confident_FOOLED_rate (judge said PASS)": 0.0,
+      "mean_overall_terse_correct (ideal high)": 4.95,
+      "terse_correct_wrongly_failed_rate": 0.0,
+      "judge_usage": {
+        "calls": 16,
+        "prompt_tokens": 4323,
+        "completion_tokens": 2974,
+        "parse_failures": 0,
+        "estimated_cost_usd": 0.0,
+        "judge_model": "groq/qwen/qwen3.8-27b"
+      }
+    },
+    "hardened_judge_AFTER": {
+      "mean_overall_correct": 5.0,
+      "mean_overall_padded": 4.4,
+      "verbosity_gain (padded - correct, ideal <= 0)": -0.6,
+      "padded_scored_higher_rate": 0.0,
+      "mean_overall_wrong_confident (ideal low)": 2.1,
+      "wrong_confident_FOOLED_rate (judge said PASS)": 0.0,
+      "mean_overall_terse_correct (ideal high)": 5.0,
+      "terse_correct_wrongly_failed_rate": 0.0,
+      "judge_usage": {
+        "calls": 16,
+        "prompt_tokens": 13619,
+        "completion_tokens": 3211,
+        "parse_failures": 0,
+        "estimated_cost_usd": 0.0,
+        "judge_model": "groq/qwen/qwen3.8-27b"
+      }
+    },
+    "n_items": 4
+  },
+  "test_retest": {
+    "n_cases": 5,
+    "runs": 2,
+    "judge_temperature": "from .env",
+    "pass_fail_flip_rate": 0.0,
+    "mean_score_range_across_runs": 0.0,
+    "identical_overall_scores_rate": 1.0,
+    "judge_usage": {
+      "calls": 10,
+      "prompt_tokens": 8368,
+      "completion_tokens": 1872,
+      "parse_failures": 0,
+      "estimated_cost_usd": 0.0,
+      "judge_model": "groq/qwen/qwen3.8-27b"
+    }
+  },
+  "self_enhancement": {
+    "n_cases": 3,
+    "generator": "groq/openai/gpt-oss-20b",
+    "same_family_judge": "groq/openai/gpt-oss-20b",
+    "different_family_judge": "groq/qwen/qwen3.8-27b",
+    "mean_score_given_to_generator_own_answers": {
+      "same_family_judge": 5.0,
+      "different_family_judge": 5.0
+    },
+    "mean_score_given_to_neutral_hand_written_answers": {
+      "same_family_judge": 3.667,
+      "different_family_judge": 4.0
+    },
+    "gap_on_own_answers": 0.0,
+    "gap_on_neutral_answers": -0.333,
+    "self_enhancement_estimate (gap_own - gap_neutral; > 0 means the same-family judge favours its own family)": 0.333,
+    "caveat": "Small sample; indicative only."
+  }
+}

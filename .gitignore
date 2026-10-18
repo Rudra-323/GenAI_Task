@@ -1,7 +1,11 @@
 .env
+.venv/
 __pycache__/
 *.pyc
-.venv/
 problem1_rag/chroma_db/
 problem1_rag/logs/
-problem2_judge/logs/
+
+# helper files for building my submission document (not part of the project)
+fill_submission.py
+submission_prefilled.docx
+~$*.docx
