@@ -1,0 +1,1162 @@
+{
+  "config": {
+    "k": 5,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "embedding_dim": 384,
+    "vectors": 44,
+    "min_similarity": 0.25,
+    "generator": "groq/openai/gpt-oss-20b",
+    "judge": "groq/qwen/qwen3.8-27b"
+  },
+  "retrieval": {
+    "k": 5,
+    "n_questions": 22,
+    "hit_rate": 0.9545,
+    "recall_at_k": 0.9545,
+    "mrr": 0.8485,
+    "ndcg_at_k": 0.8755,
+    "precision_at_k": 0.2,
+    "context_precision": 0.8485,
+    "latency_p50_ms": 1047.48,
+    "latency_p95_ms": 1231.88,
+    "questions_without_a_labelled_chunk": []
+  },
+  "retrieval_with_file_type_filter": {
+    "k": 5,
+    "n_questions": 22,
+    "hit_rate": 0.9545,
+    "recall_at_k": 0.9545,
+    "mrr": 0.8485,
+    "ndcg_at_k": 0.8755,
+    "precision_at_k": 0.2,
+    "context_precision": 0.8485,
+    "latency_p50_ms": 1053.6,
+    "latency_p95_ms": 1203.54,
+    "questions_without_a_labelled_chunk": []
+  },
+  "retrieval_per_question": [
+    {
+      "id": "q01",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q02",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q03",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q04",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q05",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q06",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        3
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 0.3333333333333333,
+      "ndcg": 0.5,
+      "precision_at_k": 0.2,
+      "context_precision": 0.3333333333333333
+    },
+    {
+      "id": "q07",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q08",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q09",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        3
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 0.3333333333333333,
+      "ndcg": 0.5,
+      "precision_at_k": 0.2,
+      "context_precision": 0.3333333333333333
+    },
+    {
+      "id": "q10",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q11",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q12",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q13",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q14",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q15",
+      "total_relevant_in_index": 2,
+      "relevant_ranks": [
+        1,
+        2
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.4,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q16",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q17",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q18",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        2
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 0.5,
+      "ndcg": 0.6309297535714575,
+      "precision_at_k": 0.2,
+      "context_precision": 0.5
+    },
+    {
+      "id": "q19",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [],
+      "hit": 0.0,
+      "recall": 0.0,
+      "rr": 0.0,
+      "ndcg": 0.0,
+      "precision_at_k": 0.0,
+      "context_precision": 0.0
+    },
+    {
+      "id": "q20",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        2
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 0.5,
+      "ndcg": 0.6309297535714575,
+      "precision_at_k": 0.2,
+      "context_precision": 0.5
+    },
+    {
+      "id": "q21",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    },
+    {
+      "id": "q22",
+      "total_relevant_in_index": 1,
+      "relevant_ranks": [
+        1
+      ],
+      "hit": 1.0,
+      "recall": 1.0,
+      "rr": 1.0,
+      "ndcg": 1.0,
+      "precision_at_k": 0.2,
+      "context_precision": 1.0
+    }
+  ],
+  "ablation": [
+    {
+      "chunk_size": 250,
+      "overlap": 25,
+      "n_chunks": 90,
+      "hit_rate": 1.0,
+      "recall_at_k": 1.0,
+      "mrr": 0.947,
+      "ndcg_at_k": 0.9605,
+      "context_precision": 0.947
+    },
+    {
+      "chunk_size": 500,
+      "overlap": 50,
+      "n_chunks": 44,
+      "hit_rate": 0.9545,
+      "recall_at_k": 0.9545,
+      "mrr": 0.8485,
+      "ndcg_at_k": 0.8755,
+      "context_precision": 0.8485
+    },
+    {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "n_chunks": 20,
+      "hit_rate": 0.9545,
+      "recall_at_k": 0.9545,
+      "mrr": 0.7212,
+      "ndcg_at_k": 0.7817,
+      "context_precision": 0.7227
+    }
+  ],
+  "answers": {
+    "n_answerable": 22,
+    "n_unanswerable": 4,
+    "faithfulness": 1.0,
+    "answer_relevance_1to5": 5.0,
+    "answer_relevance_0to1": 1.0,
+    "judged_answers": 21,
+    "judge_failed_to_parse": 0,
+    "exact_match": 0.0,
+    "f1": 0.4107,
+    "contains_gold_answer": 0.6818,
+    "wrongly_refused_answerable": 1,
+    "correctly_refused_unanswerable": 4,
+    "diagnosis": {
+      "retrieved_and_correct": 17,
+      "retrieved_but_wrong (generation problem)": 4,
+      "not_retrieved_and_wrong (retrieval problem)": 1,
+      "not_retrieved_but_correct": 0
+    },
+    "top1_similarity_answerable_min": 0.4157,
+    "top1_similarity_unanswerable_max": 0.5578
+  },
+  "answer_rows": [
+    {
+      "id": "q01",
+      "question": "How much does the Pro plan cost per user per month?",
+      "answerable_question": true,
+      "answer": "The Pro plan costs $29 per month per user. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.8527,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 243.0,
+      "llm_ms": 725.2,
+      "total_ms": 969.1,
+      "prompt_tokens": 643,
+      "completion_tokens": 89,
+      "em": 0.0,
+      "f1": 0.7692,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q02",
+      "question": "What discount do students get on the Pro plan and what do they need to qualify?",
+      "answerable_question": true,
+      "answer": "Students receive a 50 % discount on the Pro plan, provided they have a verified .edu email address. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.6104,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 256.3,
+      "llm_ms": 616.4,
+      "total_ms": 872.7,
+      "prompt_tokens": 663,
+      "completion_tokens": 176,
+      "em": 0.0,
+      "f1": 0.5714,
+      "contains_gold": 0.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 2
+      }
+    },
+    {
+      "id": "q03",
+      "question": "How much do extra API calls beyond the daily limit cost?",
+      "answerable_question": true,
+      "answer": "Extra API calls beyond the daily limit cost $0.50 per 1,000 calls. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.6174,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 206.0,
+      "llm_ms": 439.1,
+      "total_ms": 645.1,
+      "prompt_tokens": 682,
+      "completion_tokens": 136,
+      "em": 0.0,
+      "f1": 0.5333,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q04",
+      "question": "What is the minimum number of users for the Team plan?",
+      "answerable_question": true,
+      "answer": "The Team plan requires a minimum of 5 users. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5589,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 224.9,
+      "llm_ms": 604.5,
+      "total_ms": 829.5,
+      "prompt_tokens": 643,
+      "completion_tokens": 114,
+      "em": 0.0,
+      "f1": 0.4444,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q05",
+      "question": "What is the API rate limit for the Pro plan?",
+      "answerable_question": true,
+      "answer": "The Pro plan allows 600 requests per minute. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.8119,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 248.8,
+      "llm_ms": 930.8,
+      "total_ms": 1179.7,
+      "prompt_tokens": 634,
+      "completion_tokens": 132,
+      "em": 0.0,
+      "f1": 0.7273,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q06",
+      "question": "Which HTTP status code is returned when the rate limit is exceeded?",
+      "answerable_question": true,
+      "answer": "The API returns HTTP status code **429** when the rate limit is exceeded. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5787,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 243.2,
+      "llm_ms": 624.1,
+      "total_ms": 867.4,
+      "prompt_tokens": 678,
+      "completion_tokens": 132,
+      "em": 0.0,
+      "f1": 0.3077,
+      "contains_gold": 0.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q07",
+      "question": "What is the maximum page size for paginated API results?",
+      "answerable_question": true,
+      "answer": "The maximum page size for paginated API results is 100 items per page. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5493,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 236.0,
+      "llm_ms": 1143.8,
+      "total_ms": 1379.8,
+      "prompt_tokens": 687,
+      "completion_tokens": 170,
+      "em": 0.0,
+      "f1": 0.1538,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q08",
+      "question": "How long do API keys last before they expire?",
+      "answerable_question": true,
+      "answer": "API keys expire after 90 days unless they are rotated. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.4755,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 233.2,
+      "llm_ms": 533.8,
+      "total_ms": 767.0,
+      "prompt_tokens": 696,
+      "completion_tokens": 85,
+      "em": 0.0,
+      "f1": 0.75,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q09",
+      "question": "How are webhook payloads signed?",
+      "answerable_question": true,
+      "answer": "Webhook payloads are signed with HMAC‑SHA256. The resulting signature is sent in the `X‑Zentra‑Signature` header. [3]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5387,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 339.6,
+      "llm_ms": 510.6,
+      "total_ms": 850.3,
+      "prompt_tokens": 783,
+      "completion_tokens": 180,
+      "em": 0.0,
+      "f1": 0.3333,
+      "contains_gold": 0.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 2
+      }
+    },
+    {
+      "id": "q10",
+      "question": "Which encryption standard protects customer data at rest?",
+      "answerable_question": true,
+      "answer": "Customer data at rest is protected by AES‑256 encryption. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5931,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 244.8,
+      "llm_ms": 510.0,
+      "total_ms": 754.8,
+      "prompt_tokens": 687,
+      "completion_tokens": 102,
+      "em": 0.0,
+      "f1": 0.0,
+      "contains_gold": 0.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q11",
+      "question": "How long are backups retained?",
+      "answerable_question": true,
+      "answer": "Backups are retained for 35 days and are replicated across three availability zones. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.4394,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 213.5,
+      "llm_ms": 582.0,
+      "total_ms": 795.5,
+      "prompt_tokens": 593,
+      "completion_tokens": 148,
+      "em": 0.0,
+      "f1": 0.2667,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 2
+      }
+    },
+    {
+      "id": "q12",
+      "question": "Within how many hours are customers notified of a confirmed data breach?",
+      "answerable_question": true,
+      "answer": "Customers are notified within 72 hours of a confirmed data breach. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5197,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 238.0,
+      "llm_ms": 584.3,
+      "total_ms": 822.4,
+      "prompt_tokens": 613,
+      "completion_tokens": 107,
+      "em": 0.0,
+      "f1": 0.3333,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q13",
+      "question": "What is the payout range of the bug bounty programme?",
+      "answerable_question": true,
+      "answer": "The bug bounty payouts range from $100 to $10,000 depending on severity. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.6112,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 296.6,
+      "llm_ms": 2605.2,
+      "total_ms": 2901.9,
+      "prompt_tokens": 633,
+      "completion_tokens": 119,
+      "em": 0.0,
+      "f1": 0.4286,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q14",
+      "question": "How many days of paid annual leave does an employee get per year?",
+      "answerable_question": true,
+      "answer": "Employees receive 24 days of paid annual leave per year. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5844,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 220.9,
+      "llm_ms": 2611.9,
+      "total_ms": 2832.9,
+      "prompt_tokens": 623,
+      "completion_tokens": 96,
+      "em": 0.0,
+      "f1": 0.3333,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q15",
+      "question": "After how many consecutive days of sick leave is a medical certificate required?",
+      "answerable_question": true,
+      "answer": "A medical certificate is required after 3 consecutive days of sick leave. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5172,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 249.1,
+      "llm_ms": 3562.8,
+      "total_ms": 3811.9,
+      "prompt_tokens": 701,
+      "completion_tokens": 140,
+      "em": 0.0,
+      "f1": 0.4286,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q16",
+      "question": "What is the daily cap for meals while travelling?",
+      "answerable_question": true,
+      "answer": "The daily cap for meals while travelling is $60 per day. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.457,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 284.9,
+      "llm_ms": 3653.6,
+      "total_ms": 3938.6,
+      "prompt_tokens": 658,
+      "completion_tokens": 99,
+      "em": 0.0,
+      "f1": 0.4615,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q17",
+      "question": "How much is the annual learning budget per employee?",
+      "answerable_question": true,
+      "answer": "The annual learning budget per employee is $1,500. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5662,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 337.2,
+      "llm_ms": 3667.0,
+      "total_ms": 4004.3,
+      "prompt_tokens": 669,
+      "completion_tokens": 110,
+      "em": 0.0,
+      "f1": 0.4,
+      "contains_gold": 0.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q18",
+      "question": "In which release was SAML single sign-on introduced?",
+      "answerable_question": true,
+      "answer": "SAML single sign‑on was introduced in release **v2.3.0** on **January 20, 2025**. [2]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.4157,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 219.0,
+      "llm_ms": 1642.2,
+      "total_ms": 1861.3,
+      "prompt_tokens": 705,
+      "completion_tokens": 174,
+      "em": 0.0,
+      "f1": 0.5,
+      "contains_gold": 0.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 2
+      }
+    },
+    {
+      "id": "q19",
+      "question": "What was the Pro plan rate limit before it was raised to 600 requests per minute?",
+      "answerable_question": true,
+      "answer": "I don't know based on the provided documents.",
+      "system_answered": false,
+      "reason": "llm_refused",
+      "top_similarity": 0.7888,
+      "n_citations": 0,
+      "n_chunks": 5,
+      "retrieval_ms": 250.1,
+      "llm_ms": 2492.5,
+      "total_ms": 2742.6,
+      "prompt_tokens": 641,
+      "completion_tokens": 147,
+      "em": 0.0,
+      "f1": 0.0,
+      "contains_gold": 0.0,
+      "retrieval_hit": false
+    },
+    {
+      "id": "q20",
+      "question": "What is the response target for a Sev1 incident?",
+      "answerable_question": true,
+      "answer": "The response target for a Sev1 incident is to respond within 15 minutes, 24/7. [2]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.5288,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 236.4,
+      "llm_ms": 5676.0,
+      "total_ms": 5912.5,
+      "prompt_tokens": 680,
+      "completion_tokens": 160,
+      "em": 0.0,
+      "f1": 0.2857,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q21",
+      "question": "How often is the status page updated during a Sev1 incident?",
+      "answerable_question": true,
+      "answer": "The status page is updated every 30 minutes during a Sev1 incident. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.7065,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 243.2,
+      "llm_ms": 5988.1,
+      "total_ms": 6231.3,
+      "prompt_tokens": 620,
+      "completion_tokens": 134,
+      "em": 0.0,
+      "f1": 0.4615,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q22",
+      "question": "Within how many business days must a postmortem be published?",
+      "answerable_question": true,
+      "answer": "A postmortem must be published within 5 business days. [1]",
+      "system_answered": true,
+      "reason": "answered",
+      "top_similarity": 0.4206,
+      "n_citations": 1,
+      "n_chunks": 5,
+      "retrieval_ms": 255.8,
+      "llm_ms": 4490.4,
+      "total_ms": 4746.2,
+      "prompt_tokens": 655,
+      "completion_tokens": 129,
+      "em": 0.0,
+      "f1": 0.5455,
+      "contains_gold": 1.0,
+      "retrieval_hit": true,
+      "judge": {
+        "faithfulness": 1.0,
+        "relevance": 5,
+        "n_claims": 1
+      }
+    },
+    {
+      "id": "q23",
+      "question": "What is the name of Zentra's CEO?",
+      "answerable_question": false,
+      "answer": "I don't know based on the provided documents.",
+      "system_answered": false,
+      "reason": "llm_refused",
+      "top_similarity": 0.4111,
+      "n_citations": 0,
+      "n_chunks": 5,
+      "retrieval_ms": 240.0,
+      "llm_ms": 5779.1,
+      "total_ms": 6019.1,
+      "prompt_tokens": 615,
+      "completion_tokens": 171
+    },
+    {
+      "id": "q24",
+      "question": "Does Zentra Cloud offer an iOS mobile app today?",
+      "answerable_question": false,
+      "answer": "I don't know based on the provided documents.",
+      "system_answered": false,
+      "reason": "llm_refused",
+      "top_similarity": 0.5578,
+      "n_citations": 0,
+      "n_chunks": 5,
+      "retrieval_ms": 632.6,
+      "llm_ms": 5786.1,
+      "total_ms": 6418.7,
+      "prompt_tokens": 675,
+      "completion_tokens": 203
+    },
+    {
+      "id": "q25",
+      "question": "Does the Zentra API support GraphQL queries?",
+      "answerable_question": false,
+      "answer": "I don't know based on the provided documents.",
+      "system_answered": false,
+      "reason": "llm_refused",
+      "top_similarity": 0.4355,
+      "n_citations": 0,
+      "n_chunks": 5,
+      "retrieval_ms": 362.2,
+      "llm_ms": 5581.9,
+      "total_ms": 5944.2,
+      "prompt_tokens": 709,
+      "completion_tokens": 70
+    },
+    {
+      "id": "q26",
+      "question": "Who won the 2022 FIFA World Cup?",
+      "answerable_question": false,
+      "answer": "I don't know based on the provided documents.",
+      "system_answered": false,
+      "reason": "below_similarity_threshold",
+      "top_similarity": 0.1144,
+      "n_citations": 0,
+      "n_chunks": 5,
+      "retrieval_ms": 287.8,
+      "llm_ms": 0.0,
+      "total_ms": 287.8,
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    }
+  ],
+  "latency_and_tokens": {
+    "end_to_end_p50_ms": 1620.5,
+    "end_to_end_p95_ms": 6178.2,
+    "llm_calls": 25,
+    "avg_prompt_tokens": 663.4,
+    "avg_completion_tokens": 132.9,
+    "generation_cost_usd_total": 0.0,
+    "generation_cost_usd_per_1000_queries": 0.0
+  },
+  "judge_tokens": {
+    "prompt_tokens": 14868,
+    "completion_tokens": 1455
+  },
+  "cost_and_scale": {
+    "assumptions": {
+      "embedding_dim": 384,
+      "bytes_per_float": 4,
+      "hours_per_month": 730,
+      "queries_per_month_low": 100000,
+      "queries_per_month_high": 5000000,
+      "hnsw_link_bytes_per_vector": 128,
+      "ram_overhead_factor": 1.3,
+      "base_ram_gb": 2.0,
+      "disk_bytes_text_and_metadata": 1100,
+      "ebs_gp3_per_gb_month": 0.08,
+      "snapshot_per_gb_month": 0.05,
+      "instances": [
+        [
+          "t3.small",
+          2,
+          0.0208
+        ],
+        [
+          "t3.medium",
+          4,
+          0.0416
+        ],
+        [
+          "t3.large",
+          8,
+          0.0832
+        ],
+        [
+          "r6i.large",
+          16,
+          0.126
+        ],
+        [
+          "r6i.xlarge",
+          32,
+          0.252
+        ],
+        [
+          "r6i.2xlarge",
+          64,
+          0.504
+        ]
+      ],
+      "pod_price_per_hour": 0.096,
+      "p1_vectors_per_pod_768d": 1000000,
+      "s1_vectors_per_pod_768d": 5000000,
+      "serverless_storage_per_gb_month": 0.33,
+      "serverless_read_per_million_ru": 16.0,
+      "serverless_write_per_million_wu": 4.0,
+      "serverless_monthly_minimum": 50.0,
+      "pinecone_metadata_bytes_per_vector": 500,
+      "monthly_fraction_of_vectors_rewritten": 0.1,
+      "write_units_per_vector": 2
+    },
+    "rows": [
+      {
+        "vectors": 100000,
+        "self_hosted": {
+          "instance": "t3.medium",
+          "ram_needed_gb": 2.2,
+          "disk_gb": 20.6,
+          "usd": 32.03
+        },
+        "pods_p1": {
+          "pods": 1,
+          "usd": 70.08
+        },
+        "pods_s1": {
+          "pods": 1,
+          "usd": 70.08
+        },
+        "serverless_low_qps": {
+          "index_gb": 0.2,
+          "usage_usd": 0.55,
+          "usd": 50.0
+        },
+        "serverless_high_qps": {
+          "index_gb": 0.2,
+          "usage_usd": 20.15,
+          "usd": 50.0
+        }
+      },
+      {
+        "vectors": 1000000,
+        "self_hosted": {
+          "instance": "t3.large",
+          "ram_needed_gb": 4.2,
+          "disk_gb": 25.5,
+          "usd": 62.92
+        },
+        "pods_p1": {
+          "pods": 1,
+          "usd": 70.08
+        },
+        "pods_s1": {
+          "pods": 1,
+          "usd": 70.08
+        },
+        "serverless_low_qps": {
+          "index_gb": 2.04,
+          "usage_usd": 4.73,
+          "usd": 50.0
+        },
+        "serverless_high_qps": {
+          "index_gb": 2.04,
+          "usage_usd": 164.35,
+          "usd": 164.35
+        }
+      },
+      {
+        "vectors": 10000000,
+        "self_hosted": {
+          "instance": "r6i.xlarge",
+          "ram_needed_gb": 23.6,
+          "disk_gb": 75.3,
+          "usd": 191.36
+        },
+        "pods_p1": {
+          "pods": 5,
+          "usd": 350.4
+        },
+        "pods_s1": {
+          "pods": 1,
+          "usd": 70.08
+        },
+        "serverless_low_qps": {
+          "index_gb": 20.36,
+          "usage_usd": 47.29,
+          "usd": 50.0
+        },
+        "serverless_high_qps": {
+          "index_gb": 20.36,
+          "usage_usd": 1643.52,
+          "usd": 1643.52
+        }
+      }
+    ],
+    "bench": [
+      {
+        "vectors": 10000,
+        "build_seconds": 2.5,
+        "k": 5,
+        "p50_ms": 1.54,
+        "p95_ms": 2.29,
+        "filtered_p50_ms": 10.53,
+        "filtered_p95_ms": 15.85
+      },
+      {
+        "vectors": 100000,
+        "build_seconds": 44.2,
+        "k": 5,
+        "p50_ms": 2.2,
+        "p95_ms": 3.46,
+        "filtered_p50_ms": 122.72,
+        "filtered_p95_ms": 168.25
+      }
+    ]
+  }
+}
