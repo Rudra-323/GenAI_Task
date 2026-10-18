@@ -1,0 +1,220 @@
+[
+  {
+    "id": "q01",
+    "question": "How much does the Pro plan cost per user per month?",
+    "gold_answer": "$29 per month per user",
+    "evidence": "costs $29 per month per user",
+    "source": "pricing_plans.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q02",
+    "question": "What discount do students get on the Pro plan and what do they need to qualify?",
+    "gold_answer": "50% discount with a verified .edu email address",
+    "evidence": "50% discount on the pro plan with a verified .edu email",
+    "source": "pricing_plans.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q03",
+    "question": "How much do extra API calls beyond the daily limit cost?",
+    "gold_answer": "$0.50 per 1,000 calls",
+    "evidence": "$0.50 per 1,000 calls",
+    "source": "pricing_plans.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q04",
+    "question": "What is the minimum number of users for the Team plan?",
+    "gold_answer": "5 users",
+    "evidence": "requires a minimum of 5 users",
+    "source": "pricing_plans.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q05",
+    "question": "What is the API rate limit for the Pro plan?",
+    "gold_answer": "600 requests per minute",
+    "evidence": "pro plan allows 600 requests per minute",
+    "source": "api_guide.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q06",
+    "question": "Which HTTP status code is returned when the rate limit is exceeded?",
+    "gold_answer": "HTTP 429",
+    "evidence": "returns http 429",
+    "source": "api_guide.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q07",
+    "question": "What is the maximum page size for paginated API results?",
+    "gold_answer": "100",
+    "evidence": "the maximum is 100",
+    "source": "api_guide.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q08",
+    "question": "How long do API keys last before they expire?",
+    "gold_answer": "90 days unless they are rotated",
+    "evidence": "expire after 90 days",
+    "source": "api_guide.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q09",
+    "question": "How are webhook payloads signed?",
+    "gold_answer": "HMAC-SHA256, sent in the X-Zentra-Signature header",
+    "evidence": "signed with hmac-sha256",
+    "source": "api_guide.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q10",
+    "question": "Which encryption standard protects customer data at rest?",
+    "gold_answer": "AES-256",
+    "evidence": "encrypted at rest with aes-256",
+    "source": "security_whitepaper.html",
+    "file_type": "html",
+    "answerable": true
+  },
+  {
+    "id": "q11",
+    "question": "How long are backups retained?",
+    "gold_answer": "35 days",
+    "evidence": "backups are retained for 35 days",
+    "source": "security_whitepaper.html",
+    "file_type": "html",
+    "answerable": true
+  },
+  {
+    "id": "q12",
+    "question": "Within how many hours are customers notified of a confirmed data breach?",
+    "gold_answer": "72 hours",
+    "evidence": "within 72 hours of a confirmed data breach",
+    "source": "security_whitepaper.html",
+    "file_type": "html",
+    "answerable": true
+  },
+  {
+    "id": "q13",
+    "question": "What is the payout range of the bug bounty programme?",
+    "gold_answer": "$100 to $10,000",
+    "evidence": "$100 to $10,000",
+    "source": "security_whitepaper.html",
+    "file_type": "html",
+    "answerable": true
+  },
+  {
+    "id": "q14",
+    "question": "How many days of paid annual leave does an employee get per year?",
+    "gold_answer": "24 days",
+    "evidence": "24 days of paid annual leave",
+    "source": "employee_handbook.pdf",
+    "file_type": "pdf",
+    "answerable": true
+  },
+  {
+    "id": "q15",
+    "question": "After how many consecutive days of sick leave is a medical certificate required?",
+    "gold_answer": "3 consecutive days",
+    "evidence": "required after 3 consecutive days",
+    "source": "employee_handbook.pdf",
+    "file_type": "pdf",
+    "answerable": true
+  },
+  {
+    "id": "q16",
+    "question": "What is the daily cap for meals while travelling?",
+    "gold_answer": "$60 per day",
+    "evidence": "capped at $60 per day",
+    "source": "employee_handbook.pdf",
+    "file_type": "pdf",
+    "answerable": true
+  },
+  {
+    "id": "q17",
+    "question": "How much is the annual learning budget per employee?",
+    "gold_answer": "$1,500 per year",
+    "evidence": "learning budget of $1,500 per year",
+    "source": "employee_handbook.pdf",
+    "file_type": "pdf",
+    "answerable": true
+  },
+  {
+    "id": "q18",
+    "question": "In which release was SAML single sign-on introduced?",
+    "gold_answer": "v2.3.0, January 20, 2025",
+    "evidence": "introduced saml single sign-on",
+    "source": "release_notes.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q19",
+    "question": "What was the Pro plan rate limit before it was raised to 600 requests per minute?",
+    "gold_answer": "300 requests per minute",
+    "evidence": "from 300 to 600 requests per minute",
+    "source": "release_notes.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q20",
+    "question": "What is the response target for a Sev1 incident?",
+    "gold_answer": "15 minutes",
+    "evidence": "sev1 (critical outage): respond within 15 minutes",
+    "source": "support_runbook.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q21",
+    "question": "How often is the status page updated during a Sev1 incident?",
+    "gold_answer": "Every 30 minutes",
+    "evidence": "every 30 minutes during sev1",
+    "source": "support_runbook.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q22",
+    "question": "Within how many business days must a postmortem be published?",
+    "gold_answer": "5 business days",
+    "evidence": "within 5 business days",
+    "source": "support_runbook.md",
+    "file_type": "md",
+    "answerable": true
+  },
+  {
+    "id": "q23",
+    "question": "What is the name of Zentra's CEO?",
+    "answerable": false
+  },
+  {
+    "id": "q24",
+    "question": "Does Zentra Cloud offer an iOS mobile app today?",
+    "answerable": false
+  },
+  {
+    "id": "q25",
+    "question": "Does the Zentra API support GraphQL queries?",
+    "answerable": false
+  },
+  {
+    "id": "q26",
+    "question": "Who won the 2022 FIFA World Cup?",
+    "answerable": false
+  }
+]
