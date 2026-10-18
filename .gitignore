@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+problem1_rag/chroma_db/
+problem1_rag/logs/
+problem2_judge/logs/
