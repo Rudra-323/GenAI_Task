@@ -27,6 +27,15 @@ PROVIDERS = {
 }
 
 
+def retry_after_seconds(err, default=4):
+    """Read 'Please try again in 1m30.5s' style hints from a provider's rate-limit message."""
+    m = re.search(r"try again in (?:(\d+)h)?(?:(\d+)m(?!s))?(?:([\d.]+)s)?", str(err))
+    if m and any(m.groups()):
+        hours, minutes, secs = (float(x) if x else 0.0 for x in m.groups())
+        return hours * 3600 + minutes * 60 + secs + 1
+    return default
+
+
 class LLM:
     """A chat model configured from env vars like <PREFIX>_PROVIDER / <PREFIX>_MODEL."""
 
@@ -49,7 +58,7 @@ class LLM:
         if not api_key:
             raise ValueError(f"{key_name} is not set. Add it to your .env file")
 
-        self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=120)
+        self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=120, max_retries=0)  # we handle retries ourselves
         self.temperature = float(get("TEMPERATURE") or 0)
         self.max_tokens = int(get("MAX_TOKENS") or 1500)
         self.price_in = float(get("PRICE_IN_PER_M") or 0)    # USD per 1M input tokens
@@ -57,7 +66,7 @@ class LLM:
 
     def chat(self, messages, temperature=None, max_tokens=None):
         """Send messages, return {text, prompt_tokens, completion_tokens, latency_ms}.
-        Retries with a growing wait when the provider says "slow down" (rate limit)."""
+        On a rate limit it waits as long as the provider asks (and says so), but gives up on very long waits."""
         wait = 4
         for attempt in range(6):
             start = time.perf_counter()
@@ -72,8 +81,12 @@ class LLM:
             except (RateLimitError, APIConnectionError, APITimeoutError, InternalServerError) as err:
                 if attempt == 5:
                     raise
-                print(f"  [{self.provider}] {type(err).__name__}, retrying in {wait}s ...")
-                time.sleep(wait)
+                seconds = retry_after_seconds(err, default=wait)
+                if seconds > 900:
+                    raise RuntimeError(f"The provider asks for a {seconds / 60:.0f} minute wait. This is probably a DAILY limit, "
+                                       f"so retrying now will not work. Provider message: {err}") from err
+                print(f"  [{self.provider}] {type(err).__name__}: waiting {seconds:.0f}s before retrying ...")
+                time.sleep(seconds)
                 wait *= 2
         usage = resp.usage
         return {
