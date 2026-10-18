@@ -1,0 +1,77 @@
+{
+  "description": "Probe set: a correct answer, a confident-but-wrong answer and a terse-but-correct answer per question. 'Padded' answers are generated in code.",
+  "items": [
+    {
+      "id": "p1",
+      "input": "Which planet is known as the Red Planet?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "Mars",
+      "correct": "Mars is known as the Red Planet because iron oxide on its surface gives it a reddish colour.",
+      "wrong_confident": "Jupiter is known as the Red Planet; its Great Red Spot and rust-coloured atmosphere give the whole planet a distinctive red appearance, which is why astronomers have always called it that.",
+      "terse_correct": "Mars."
+    },
+    {
+      "id": "p2",
+      "input": "Who painted the Mona Lisa?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "Leonardo da Vinci",
+      "correct": "The Mona Lisa was painted by Leonardo da Vinci in the early 16th century.",
+      "wrong_confident": "The Mona Lisa was painted by Michelangelo during the High Renaissance, and it hangs in the Louvre in Paris, where it is one of the museum's most celebrated works.",
+      "terse_correct": "Leonardo da Vinci."
+    },
+    {
+      "id": "p3",
+      "input": "What is the largest ocean on Earth?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "Pacific Ocean",
+      "correct": "The Pacific Ocean is the largest ocean, covering more area than all of Earth's land combined.",
+      "wrong_confident": "The Atlantic Ocean is the largest ocean on Earth, stretching between the Americas and Europe and Africa and holding more water than any other ocean.",
+      "terse_correct": "The Pacific."
+    },
+    {
+      "id": "p4",
+      "input": "How many sides does a hexagon have?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "Six",
+      "correct": "A hexagon is a polygon with six sides.",
+      "wrong_confident": "A hexagon has eight sides, and eight interior angles that add up to 1,080 degrees.",
+      "terse_correct": "Six."
+    },
+    {
+      "id": "p5",
+      "input": "What gas do plants absorb from the air for photosynthesis?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "Carbon dioxide",
+      "correct": "Plants absorb carbon dioxide from the air and use it with water and sunlight to make glucose.",
+      "wrong_confident": "Plants primarily absorb oxygen from the atmosphere for photosynthesis, which they then convert into energy-rich sugars using sunlight.",
+      "terse_correct": "Carbon dioxide."
+    },
+    {
+      "id": "p6",
+      "input": "What is the square root of 144?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "12",
+      "correct": "The square root of 144 is 12.",
+      "wrong_confident": "The square root of 144 is 14, since 14 multiplied by itself gives 144 exactly.",
+      "terse_correct": "12."
+    },
+    {
+      "id": "p7",
+      "input": "In which country is the city of Kyoto?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "Japan",
+      "correct": "Kyoto is a city in Japan, and it was the country's imperial capital for over a thousand years.",
+      "wrong_confident": "Kyoto is located in South Korea, where it serves as one of the nation's most important historical and cultural centres.",
+      "terse_correct": "Japan."
+    },
+    {
+      "id": "p8",
+      "input": "What is the freezing point of water in Fahrenheit?",
+      "system_prompt": "You are a helpful assistant.",
+      "expected_output": "32 degrees Fahrenheit",
+      "correct": "Water freezes at 32 degrees Fahrenheit, which is 0 degrees Celsius.",
+      "wrong_confident": "Water freezes at 0 degrees Fahrenheit, which is the standard reference point for the freezing of pure water at sea level.",
+      "terse_correct": "32 degrees Fahrenheit."
+    }
+  ]
+}
