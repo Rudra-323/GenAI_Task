@@ -19,6 +19,7 @@ import re
 import string
 import tempfile
 import time
+import unicodedata
 from pathlib import Path
 
 import numpy as np
@@ -109,6 +110,8 @@ def run_ablation(questions, k):
 
 # ------------------------------------------------------------------ layer 2: answers
 def squad_norm(text):
+    text = unicodedata.normalize("NFKC", text)                         # LLMs often write narrow no-break spaces (U+202F)
+    text = re.sub(r"[\u2010-\u2015\u2212]", "-", text)                 # ...and non-breaking hyphens: make them plain
     text = re.sub(r"\[\d+\]", " ", text.lower())                       # drop citation markers like [1]
     text = "".join(ch for ch in text if ch not in string.punctuation)
     return " ".join(w for w in text.split() if w not in ("a", "an", "the"))
@@ -121,6 +124,12 @@ def f1_score(prediction, gold):
         return 0.0
     precision, recall = common / len(p), common / len(g)
     return 2 * precision * recall / (precision + recall)
+
+
+def gold_recall(prediction, gold):
+    """Share of the gold answer's words that appear in the prediction (fair when gold is short, answer is a sentence)."""
+    p, g = squad_norm(prediction).split(), squad_norm(gold).split()
+    return sum(1 for w in g if w in p) / len(g) if g else 0.0
 
 
 JUDGE_SYSTEM = """You grade the answer of a retrieval-augmented QA system.
@@ -169,6 +178,7 @@ def run_answers(questions, k, collection, relevant_hit):
             row["em"] = float(squad_norm(res["answer"]) == squad_norm(q["gold_answer"]))
             row["f1"] = round(f1_score(res["answer"], q["gold_answer"]), 4)
             row["contains_gold"] = float(squad_norm(q["gold_answer"]) in squad_norm(res["answer"]))
+            row["gold_recall"] = round(gold_recall(res["answer"], q["gold_answer"]), 4)
             row["retrieval_hit"] = relevant_hit.get(q["id"])
             if res["answerable"]:
                 try:
@@ -190,7 +200,7 @@ def summarize_answers(rows):
     judged = [r["judge"] for r in answerable if r.get("judge")]
     faith = [j["faithfulness"] for j in judged if j["faithfulness"] is not None]
     # diagnosis: was the failure in retrieval or in generation?
-    correct = lambda r: r["contains_gold"] == 1.0 or r["f1"] >= 0.5
+    correct = lambda r: r["contains_gold"] == 1.0 or r["gold_recall"] >= 0.8   # all key gold words are in the answer
     diagnosis = {
         "retrieved_and_correct": sum(1 for r in answerable if r["retrieval_hit"] and correct(r)),
         "retrieved_but_wrong (generation problem)": sum(1 for r in answerable if r["retrieval_hit"] and not correct(r)),
@@ -204,7 +214,7 @@ def summarize_answers(rows):
         "answer_relevance_0to1": round(float(np.mean([(j["relevance"] - 1) / 4 for j in judged])), 4) if judged else None,
         "judged_answers": len(judged), "judge_failed_to_parse": sum(1 for r in answerable if r["system_answered"] and not r.get("judge")),
         "exact_match": mean_of(answerable, "em"), "f1": mean_of(answerable, "f1"),
-        "contains_gold_answer": mean_of(answerable, "contains_gold"),
+        "contains_gold_answer": mean_of(answerable, "contains_gold"), "gold_word_recall": mean_of(answerable, "gold_recall"),
         "wrongly_refused_answerable": sum(1 for r in answerable if not r["system_answered"]),
         "correctly_refused_unanswerable": sum(1 for r in unanswerable if not r["system_answered"]),
         "diagnosis": diagnosis,
